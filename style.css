@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  background-image: linear-gradient(#0d1a2d, #0c1729);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 80vw;
+  max-width: 430px;
+  background-color: #15273f;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+  position: relative;
+  cursor: pointer;
+}
+
+/*Hover effect*/
+    .image-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background-color: rgb(0, 255, 247, 0.5);
+    border-radius: 10px;
+    }
+
+    .image-container::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url("images/icon-view.svg") no-repeat center;
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    }
+
+    .image-container:hover::after,
+    .image-container:hover::before {
+    opacity: 1;
+    }
+
+    .image-container.active::before {
+    opacity: 1;
+    }
+
+    .image-container.active::after {
+    opacity: 1;
+    }
+/*Hover effect*/
+
+.equilibrium {
+  width: 100%;
+  border-radius: 10px;
+}
+
+h2 {
+  color: white;
+  margin: 20px 0;
+  font-size: 1.7em;
+  letter-spacing: 1px;
+}
+
+h2:hover,
+.creator span:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.description {
+  color: #7b95b4;
+  font-size: 1.2em;
+  line-height: 150%;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.price img,
+.time img {
+  margin-right: 5px;
+}
+
+.price {
+  color: #00fff7;
+  font-weight: bold;
+}
+
+.time {
+  color: #7b95b4;
+}
+
+.line {
+  width: 100%;
+  border: 1px solid rgb(123, 149, 180, 0.2);
+}
+
+.creator {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.creator img {
+  width: 50px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+.creator p {
+  color: #7b95b4;
+  font-size: 1em;
+}
+
+.creator span {
+  color: white;
+}
